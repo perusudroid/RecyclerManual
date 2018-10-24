@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/recycler_background"
+        android:nestedScrollingEnabled="false" />
+
+    <Button
+        android:id="@+id/btnPreviuos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previous"
+        android:onClick="scrollRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:onClick="scrollRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <ImageView
+        android:id="@+id/ivSelectedPic"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toBottomOf="@+id/btnPreviuos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</android.support.constraint.ConstraintLayout>
