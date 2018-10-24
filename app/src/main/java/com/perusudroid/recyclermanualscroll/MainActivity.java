@@ -60,9 +60,11 @@ public class MainActivity extends AppCompatActivity implements IListener {
                 showPos();
                 break;
             case R.id.btnNext:
-                moveBy = moveBy + 3;
-                layoutManager.scrollToPosition(moveBy);
-                showPos();
+                if (moveBy < 9) {
+                    moveBy = moveBy + 3;
+                    layoutManager.scrollToPosition(moveBy);
+                    showPos();
+                }
                 break;
         }
     }
